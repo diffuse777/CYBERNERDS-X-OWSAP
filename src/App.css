@@ -1,0 +1,47 @@
+/* Set global font families for headings and body/text */
+h1, h2, h3, h4, h5, h6, .heading, .font-orbitron {
+  font-family: 'Orbitron', sans-serif !important;
+}
+
+body, html, p, li, ul, ol, input, textarea, select, button, .body-text, .font-jetbrains {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+/* Orbitron & JetBrains Mono from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@700&display=swap');
+
+.glitch {
+  position: relative;
+  color: #39FF14;
+  text-shadow: 0 0 8px #00FFFF, 0 0 16px #9D00FF;
+  animation: glitch 1.5s infinite linear alternate-reverse;
+}
+
+.animate-glitch {
+  animation: glitch 1.5s infinite linear alternate-reverse;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.2s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 0 #00FFFF, -2px 0 #9D00FF; }
+  20% { text-shadow: -2px 0 #00FFFF, 2px 0 #9D00FF; }
+  40% { text-shadow: 2px 2px #00FFFF, -2px -2px #9D00FF; }
+  60% { text-shadow: -2px -2px #00FFFF, 2px 2px #9D00FF; }
+  80% { text-shadow: 2px 0 #00FFFF, -2px 0 #9D00FF; }
+  100% { text-shadow: 0 0 8px #00FFFF, 0 0 16px #9D00FF; }
+}
